@@ -26,3 +26,17 @@ spec:
           - |
             echo "<html><body><h1>$GREETING, $MESSAGE</h1></body></html>" > /usr/share/nginx/html/index.html;
             nginx -g 'daemon off;';
+            
+# [ Browser ]
+#      |
+#      | 31234 (NodePort)
+#      v
+# [ Node ]
+#      |
+#      | 80 (Service port)
+#      v
+# [ Pod ]
+#      |
+#      | 80 (containerPort)
+#      v
+# [ nginx ]

@@ -12,6 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          clean: true
 
       - name: 컨피그맵 적용
         run: kubectl apply -f configmap.yaml
